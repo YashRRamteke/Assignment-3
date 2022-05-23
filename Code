@@ -1,1 +1,100 @@
 
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+\usepackage{amsmath}
+
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Title page details: 
+\title{Probability and Random Variables}
+\subtitle{Assignment 3}
+\author{Yash R Ramteke (bt21btech11006)}
+\date{\today}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Problem}
+
+\begin{frame}{Assignment 3}
+  \frametitle{Problem}
+  Find the probability distribution of the number of successes in two tosses of a die, where a success is defined as
+  \begin{enumerate}
+    \item number greater than 4
+    \item six appears on at least one die
+  \end{enumerate}
+\end{frame}
+
+\section{Solution}
+
+\begin{frame}
+ When a die is tossed two times, we obtain $6$ x $6$ $=$ $36$ number of observations.
+ \\
+ Let X be the random variable, which represents the number of successes.
+\end{frame}
+
+\subsection{Part 1}
+\begin{frame}
+  \frametitle{Number greater than $4$}
+ Here, success refers to the number greater than $4$.\\
+ P(X$=0$)= P(number less than or equal to $4$ on both the tosses)\\
+ \begin{equation}
+ = \frac{4}{6} \times \frac{4}{6} = \frac{4}{9}
+\end{equation}
+P(X=1) = P(number less than or equal to 4 on first toss and greater than 4 on second toss) + P(number greater than 4 on first toss and less than or equal to 4 on second toss)
+\begin{equation}
+= \frac{4}{6} \times \frac{2}{6} + \frac{4}{6} \times \frac{2}{6} = \frac{4}{9}
+\end{equation}
+P(X=2) = P(number greater than 4 on both the tosses) 
+\begin{equation}
+= \frac{2}{6} \times \frac{2}{6} = \frac{1}{9}
+\end{equation}
+\end{frame}  
+\begin{frame}
+Thus the probability distribution is as follows:
+\begin{align}
+    P(X_1 = k) = 
+    \begin{cases}
+      \frac{4}{9} , & k = 0 \\
+      \frac{4}{9} , & k = 1 \\
+      \frac{1}{9} , & k = 2 \\
+    \end{cases}
+\end{align}
+\end{frame}
+\begin{frame}
+  \frametitle{Six appears on at least one die}
+  Here, success means six appears on at least one die.
+  \\
+ P(Y=0) = P(six appears on none of the dice) 
+ \begin{equation}
+     = \frac{5}{6} x \frac{5}{6} = \frac{25}{36}
+ \end{equation}
+ P(Y=1) = P(six appears on at least one of the dice)
+ \begin{equation}
+ = \frac{11}{36}
+ \end{equation}
+ Thus the probability distribution is as follows:
+\begin{align}
+    P(X_1 = k) = 
+    \begin{cases}
+      \frac{25}{36} , & k = 0 \\
+      \frac{11}{36} , & k = 1 \\
+    \end{cases}
+\end{align}
+
+\end{frame}
+\end{document}
+
